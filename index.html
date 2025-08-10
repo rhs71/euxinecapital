@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Centered Text</title>
+  <link rel="preload" as="image" href="m.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <style>
     body {
@@ -14,17 +15,23 @@
       font-family: 'Inter', sans-serif;
       text-align: center;
       color: #003366;
-      background: url('m.png') no-repeat center center;
+      background: #f3f3f3 url('m.webp') no-repeat center center;
       background-size: cover;
+      visibility: hidden;
     }
     h1 { font-size: 3em; margin: 0; }
     p  { font-size: 1em; margin: 0; }
   </style>
+  <script>
+    window.addEventListener('load', () => {
+      document.body.style.visibility = 'visible';
+    });
+  </script>
 </head>
 <body>
   <div>
     <h1>EUXINE CAPITAL</h1>
-    <p>London | Los Angeles | Hong Kong | Shanghai</p>
+    <p>London | Hong Kong</p>
   </div>
 </body>
 </html>
